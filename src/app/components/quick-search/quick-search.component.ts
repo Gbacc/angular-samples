@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/Rx';
 
 @Component({
     selector: 'my-quick-search',
@@ -16,9 +17,6 @@ export class QuickSearchComponent implements OnInit, OnDestroy {
 
     private _inputChangeSubscription: Subscription;
     private _inputMinCharacterLength: number = 3;
-
-    constructor(
-    ) { }
 
     public ngOnInit() {
         this.subscribeInputChange();
