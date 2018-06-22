@@ -1,0 +1,14 @@
+<div class="dropdown">
+    <div class="btn-group">
+        <a class="btn" layout="row" layout-align="start center">
+            <span *ngIf="icon" [innerHTML]="icon" class="mr-5"></span>
+            <span>{{label}}</span>
+        </a>
+        <a class="btn dropdown-toggle" tabindex="0">
+            <i class="fa fa-chevron-down mt-5"></i>
+        </a>
+        <div class="menu">
+            <dropdown-item [items]="items" [selectedItem]="selectedItem" (onItemSelect)="onItemSelectEmit($event)"></dropdown-item>
+        </div>
+    </div>
+</div>

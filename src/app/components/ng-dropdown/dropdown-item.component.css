@@ -1,0 +1,17 @@
+:host .dropdown-item-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+:host ul {
+    margin-bottom: 0;
+}
+
+:host .menu-item a {
+    white-space: nowrap;
+}
+
+:host .menu-item {
+    list-style: none;
+}

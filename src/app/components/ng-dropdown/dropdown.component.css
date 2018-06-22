@@ -1,0 +1,13 @@
+:host .menu {
+    max-height: 500px;
+    overflow: auto;
+}
+
+:host .menu dropdown-item {
+    margin-left: -30px;
+    display: block;
+}
+
+:host .menu-item {
+    list-style: none;
+}
