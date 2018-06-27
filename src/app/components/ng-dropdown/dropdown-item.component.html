@@ -1,13 +1,13 @@
 <ul class="menu-item">
     <li class="menu-item" *ngFor="let item of items">
         <div *ngIf="!item.children">
-            <span (click)="onItemSelectEmit(item)" layout="row" layout-align="start center" [class.active]="selectedItem && selectedItem.id == item.id" class="hand mt-5 mb-5">
+            <span (click)="onItemSelectEmit(item)" [class.active]="selectedItem && selectedItem.id == item.id" class="hand mt-5 mb-5">
                 <span class="dropdown-item-icon" [innerHTML]="getIcon(item)"></span>
                 <span>{{item.label}}</span>
             </span>
         </div>
         <div *ngIf="item.children">
-            <div layout="row" layout-align="start center">
+            <div>
                 <i class="fa fa-minus mr-5"></i>{{item.label}}
             </div>
             <dropdown-item [items]="item.children" [selectedItem]="selectedItem" (onItemSelect)="onItemSelectEmit($event)"></dropdown-item>

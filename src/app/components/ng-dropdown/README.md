@@ -1,5 +1,6 @@
 # About this component
-This component is a simplement html dropdown component usable with Angular 2+. It is based on [Spectre.css](https://picturepan2.github.io/spectre/) library using the [dropdown menu](https://picturepan2.github.io/spectre/components.html#menu-dropdown) component.
+This component is a simplement html dropdown component usable with Angular 2+.  
+It is based on [Spectre.css](https://picturepan2.github.io/spectre/) library using the [dropdown menu](https://picturepan2.github.io/spectre/components.html#menu-dropdown) component and [Fontawesome](https://fontawesome.com/v4.7.0/).
 
 # Usage
 The html template looks as follow
