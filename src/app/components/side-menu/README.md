@@ -6,6 +6,9 @@ It works in 2 ways :
 * Shows up a global state of the component with label/color : Changes not saved, Saving..., Save complete, Error occured
 * Shows up a list of buttons defined by the user. Can be bound to a label/icon/function and reflects the function async state if possible
 
+# Exemple in action
+![Exemple in action](./side-menu.component.gif)
+
 # Usage
 
 ## Service
