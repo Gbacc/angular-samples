@@ -1,0 +1,27 @@
+<div *ngIf="sideMenuService.menuActionList.length" layout="column">
+    <div layout="column" layout-align="center end">
+        <button disabled layout="row" layout-align="center center" class="btn no-border changed" *ngIf="sideMenuService.formStatus === 'changed'">
+            <span class="hide-sm ml-5 mr-10" [innerHTML]="'Changes not saved'"></span>
+            <i class="fa fa-lg fa-exclamation-circle"></i>            
+        </button>
+        <button disabled layout="row" layout-align="center center" class="btn no-border pending" *ngIf="sideMenuService.formStatus === 'pending'">
+            <span class="hide-sm ml-5 mr-10" [innerHTML]="'Saving...'"></span>
+            <i class="fa fa-lg fa-circle-o-notch fa-spin"></i>            
+        </button>
+        <button disabled layout="row" layout-align="center center" class="btn no-border success" *ngIf="sideMenuService.formStatus === 'success'">
+            <span class="hide-sm ml-5 mr-10" [innerHTML]="'Save complete'"></span>
+            <i class="fa fa-lg fa-check"></i>            
+        </button>
+        <button disabled layout="row" layout-align="center center" class="btn no-border failed" *ngIf="sideMenuService.formStatus === 'failed'">
+            <span class="hide-sm ml-5 mr-10" [innerHTML]="'Error occured'"></span>
+            <i class="fa fa-lg fa-times"></i>            
+        </button>
+
+        <button layout="row" layout-align="end center" class="btn no-border" *ngFor="let action of sideMenuService.menuActionList" (click)="launchAction(action)" [disabled]="action.actionEnabled && !action.actionEnabled()">
+            <span class="ml-5 mr-10">{{action.label}}</span>
+            <i [class]="'fa fa-lg '+ action.icon" *ngIf="!action.status"></i>
+            <i class="fa fa-lg" [class.fa-times]="action.status === 'failed'" [class.fa-check]="action.status === 'success'" [class.fa-circle-o-notch]="action.status === 'pending'"
+                [class.fa-spin]="action.status === 'pending'" *ngIf="action.status"></i><span class="hide-sm"></span>
+        </button>
+    </div>
+</div>

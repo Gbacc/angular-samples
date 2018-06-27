@@ -1,0 +1,61 @@
+:host {
+    position: absolute;
+    right: 0px;
+    bottom: 100px;
+    z-index: 1300;
+    overflow: hidden;
+    background-color: #307e9f;
+    max-width: 41px;
+    transition: max-width 0.2s ease-out;
+    box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
+}
+
+:host:hover {
+    max-width: 200px;
+    transition: max-width 0.2s ease-in;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border-radius: 0;
+    min-width: 100%;
+}
+
+button.changed,
+button.pending,
+button.success,
+button.failed {
+    background-color: white;
+    color: initial;
+    opacity: 1;
+    height: auto;
+}
+
+button:hover {
+    background-color: #F49E00;
+    color: black;
+}
+
+[layout],
+[layout-align] {
+    display: flex;
+}
+
+[layout="column"] {
+    flex-direction: column;
+}
+
+[layout="row"] {
+    flex-direction: row;
+}
+
+[layout-align="center center"] {
+    place-content: center;
+    align-items: center;
+}
+
+[layout-align="end center"] {
+    place-content: center flex-end;
+    align-items: center;
+}
